@@ -7,7 +7,7 @@ class Video():
 		self.image_url = image_url
 		self.trailer_url = trailer_url
 
-	def play_trailer():
+	def play_trailer(self):
 	#function for playing the video trailer
 		webbrowser.open(self.trailer_url)
 
