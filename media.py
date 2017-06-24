@@ -13,20 +13,22 @@ class Video():
 
 class Movie(Video):
 	'''this is child class of Video for movies'''
-	def __init__(self, title, image_url, trailer_url, box_office, release_date, duration):
+	def __init__(self, title, image_url, trailer_url, box_office, release_date, duration, director):
 		print "Movie constructor called"
 		Video.__init__(self, title, image_url, trailer_url)
 		self.box_office = box_office
 		self.release_date = release_date
 		self.duration = duration
+		self.director = director
 
 class TV(Video):
 	'''this is child class of Video for TV shows'''
 	def __init__(self, title, image_url, trailer_url, num_seasons, num_episodes,
-				 first_episode, last_episode):
+				 first_episode, last_episode, tv_network):
 		print "TV constructor called"
 		Video.__init__(self, title, image_url, trailer_url)
 		self.num_seasons = num_seasons
 		self.num_episodes = num_episodes
 		self.first_episode = first_episode
 		self.last_episode = last_episode
+		self.tv_network = tv_network
