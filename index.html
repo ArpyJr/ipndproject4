@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Favorite Movies and TVs</title>
+
+		<!--			JAVASCRIPT			-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		window.onload = function () {
+			$(".poster").mouseenter(function() {
+				console.log("mouse entered");
+				$(this).css("display", "none");
+				$(this).siblings(".description").css("display", "block");
+			});
+			$(".description").mouseleave(function() {
+				console.log("mouse left");
+				$(this).css("display", "none");
+				$(this).siblings(".poster").css("display", "block")
+			});
+		}
+		</script>
+		<!--			JAVASCRIPT			-->
+
+		<!--			CSS			-->
+		<style>
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+			}
+
+			#content-box {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0;
+				height: 100%;
+				width: 100%;
+			}
+
+			.content {
+				margin: 15px auto 15px auto;
+				width: 400px;
+				height: 600px;
+				-webkit-box-shadow: 10px 10px 41px -13px rgba(0,0,0,0.75);
+				-moz-box-shadow: 10px 10px 41px -13px rgba(0,0,0,0.75);
+				box-shadow: 10px 10px 41px -13px rgba(0,0,0,0.75);
+			}
+
+			.poster {
+				height: 100%;
+				width: 100%;
+			}
+
+			.description {
+				display: none;
+			}
+
+			#video-box {
+				display: none;
+				z-index: 9;
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+		<!--			CSS			-->
+	</head>
+	<body>
+		<div id="content-box">
+			<!--
+			This is the format for the content that will be displayed.
+			Number of div.content should depend on number of Movie and TV instances.
+			<div class="content">
+			</div>
+			-->
+			<!-- example for Movie instance -->
+			<div class="content">
+				<img class="poster" src="https://s-media-cache-ak0.pinimg.com/564x/fd/5e/66/fd5e662dce1a3a8cd192a5952fa64f02.jpg" alt="title of video">
+				<div class="description">
+					<h1>Fight Club</h1>
+					<h2>Length</h2>
+					<span>125min</span>
+					<h2>Release Date</h2>
+					<span>October 32 2029</span>
+					<h2>Director</h2>
+					<span>TobyDoby Lemon</span>
+					<h2>Box Office</h2>
+					<span>&#36;20 Million</span>
+					<span>Play Trailer</span>
+				</div>
+			</div>
+			<!-- example for TV instance -->
+			<div class="content">
+				<img class="poster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0NVxLFYMRfhJIjryxq6G-rWYQiqUnTf7bZmjwIgWA8HNUHXo" alt="title of video">
+				<div class="description">
+					<h1>Rick and Morty</h1>
+					<h2>Network</h2>
+					<span>Adult Swim</span>
+					<h2>First Episode</h2>
+					<span>February 31 2001</span>
+					<h2>Last Episode</h2>
+					<span>On going</span>
+					<h2>Number of Seasons</h2>
+					<span>3</span>
+					<h2>Number of Episodes</h2>
+					<span>22</span>
+					<span>Play Trailer</span>
+				</div>
+			</div>
+			<div class="content">
+			</div>
+			<div class="content">
+			</div>
+			<div class="content">
+			</div>
+			<div class="content">
+			</div>
+		</div>
+		<div id="video-box">
+		</div>
+	</body>
+</html>
