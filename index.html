@@ -55,10 +55,17 @@
 			}
 
 			#video-box {
+				position: absolute;
+				top: 0;
 				display: none;
 				z-index: 9;
 				height: 100%;
 				width: 100%;
+			}
+
+			iframe {
+				margin-left: calc(100%/2 - 560px/2);
+				margin-top: 200px;
 			}
 		</style>
 	</head>
@@ -114,6 +121,7 @@
 			</div>
 		</div>
 		<div id="video-box">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/WNhH00OIPP0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</body>
 </html>
