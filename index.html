@@ -18,6 +18,10 @@
 				$(this).siblings(".poster").css("display", "block")
 			});
 		}
+
+		function launchTrailer(url) {
+			$("#video-box").append('<iframe width="560" height="315" src=' + url + ' frameborder="0" allowfullscreen></iframe>')
+		}
 		</script>
 		<style>
 			body {
@@ -90,7 +94,7 @@
 					<p>TobyDoby Lemon</p>
 					<h2>Box Office</h2>
 					<p>&#36;20 Million</p>
-					<a>Play Trailer</a>
+					<a onclick="launchTrailer('https://www.youtube.com/embed/WNhH00OIPP0')">Play Trailer</a>
 				</div>
 			</div>
 			<!-- example for TV instance -->
@@ -108,7 +112,7 @@
 					<p>3</p>
 					<h2>Number of Episodes</h2>
 					<p>22</p>
-					<a>Play Trailer</a>
+					<a onclick="launchTrailer('https://www.youtube.com/embed/WNhH00OIPP0')">Play Trailer</a>
 				</div>
 			</div>
 			<div class="content">
@@ -121,7 +125,9 @@
 			</div>
 		</div>
 		<div id="video-box">
+			<!-- trailer video format
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/WNhH00OIPP0" frameborder="0" allowfullscreen></iframe>
+			-->
 		</div>
 	</body>
 </html>
