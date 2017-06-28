@@ -2,7 +2,8 @@ import webbrowser
 
 class Video():
 	'''this is the parent class for classes Movie and TV'''
-	def __init__(self, title, image_url, trailer_url):
+	def __init__(self, vid_type, title, image_url, trailer_url):
+		self.vid_type = vid_type
 		self.title = title
 		self.image_url = image_url
 		self.trailer_url = trailer_url
@@ -13,9 +14,9 @@ class Video():
 
 class Movie(Video):
 	'''this is child class of Video for movies'''
-	def __init__(self, title, image_url, trailer_url, box_office, release_date, duration, director):
+	def __init__(self, vid_type, title, image_url, trailer_url, box_office, release_date, duration, director):
 		print "Movie constructor called"
-		Video.__init__(self, title, image_url, trailer_url)
+		Video.__init__(self, vid_type, title, image_url, trailer_url)
 		self.box_office = box_office
 		self.release_date = release_date
 		self.duration = duration
@@ -23,10 +24,10 @@ class Movie(Video):
 
 class TV(Video):
 	'''this is child class of Video for TV shows'''
-	def __init__(self, title, image_url, trailer_url, num_seasons, num_episodes,
+	def __init__(self, vid_type, title, image_url, trailer_url, num_seasons, num_episodes,
 				 first_episode, last_episode, tv_network):
 		print "TV constructor called"
-		Video.__init__(self, title, image_url, trailer_url)
+		Video.__init__(self, vid_type, title, image_url, trailer_url)
 		self.num_seasons = num_seasons
 		self.num_episodes = num_episodes
 		self.first_episode = first_episode
