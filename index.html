@@ -15,12 +15,17 @@
 			$(".description").mouseleave(function() {
 				console.log("mouse left");
 				$(this).css("display", "none");
-				$(this).siblings(".poster").css("display", "block")
+				$(this).siblings(".poster").css("display", "block");
+			});
+			$("#video-box").click(function() {
+				$(this).css("display", "none");
+				$(this).empty();
 			});
 		}
 
 		function launchTrailer(url) {
-			$("#video-box").append('<iframe width="560" height="315" src=' + url + ' frameborder="0" allowfullscreen></iframe>')
+			$("#video-box").append('<iframe width="560" height="315" src=' + url + ' frameborder="0" allowfullscreen></iframe>');
+			$("#video-box").css("display", "block");
 		}
 		</script>
 		<style>
@@ -63,6 +68,7 @@
 				top: 0;
 				display: none;
 				z-index: 9;
+				background: rgba(0, 0, 0, 0.70);
 				height: 100%;
 				width: 100%;
 			}
