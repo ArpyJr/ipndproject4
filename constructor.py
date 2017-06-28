@@ -69,6 +69,10 @@ html_head = '''
 				height: 100%;
 			}
 
+			h1 {
+				margin-top: 0
+			}
+
 			#video-box {
 				position: absolute;
 				top: 0;
