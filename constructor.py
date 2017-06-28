@@ -1,6 +1,5 @@
 import os
 import webbrowser
-import re
 
 
 html_head = '''
@@ -30,7 +29,7 @@ html_head = '''
 		}
 
 		function launchTrailer(url) {
-			$("#video-box").append('<iframe width="560" height="315" src=' + url + ' frameborder="0" allowfullscreen></iframe>');
+			$("#video-box").append('<iframe width="" height="" src=' + url + ' frameborder="0" allowfullscreen></iframe>');
 			$("#video-box").css("display", "block");
 		}
 		</script>
@@ -39,6 +38,7 @@ html_head = '''
 				width: 100%;
 				height: 100%;
 				margin: 0;
+				position: relative;
 			}
 
 			#content-box {
@@ -80,8 +80,10 @@ html_head = '''
 			}
 
 			iframe {
-				margin-left: calc(100%/2 - 560px/2);
-				margin-top: 200px;
+				margin-left: 10vw;
+				margin-top: 10vh;
+				width: 80vw;
+				height: 80vh;
 			}
 		</style>
 	</head>
@@ -220,6 +222,6 @@ def create_html(video):
 	#writes head and body of html to movies.html
 	output_file.write(html_head + output_html)
 	output_file.close()
-	
+
 	url = os.path.abspath(output_file.name)
 	webbrowser.open('file://' + url, new=2)
